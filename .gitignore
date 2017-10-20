@@ -20,7 +20,6 @@ docs/en/*
 /docs/changes
 *.vue.vux.*
 src/locales/components.yml
-/dist/**/*
 src/components/index.js
 test/unit/coverage/
 docs/*.map
