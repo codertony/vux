@@ -1,16 +1,16 @@
 <template>
   <div class="vux-form-preview weui-form-preview">
-    <div class="weui-form-preview__hd">
+    <div class="weui-form-preview__hd" v-show="headerLabel||headerValue">
       <label class="weui-form-preview__label" v-html="headerLabel"></label>
       <em class="weui-form-preview__value" v-html="headerValue || '&nbsp;'"></em>
     </div>
-    <div class="weui-form-preview__bd">
+    <div class="weui-form-preview__bd" v-show="bodyItems">
       <div class="weui-form-preview__item" v-for="item in bodyItems">
         <label class="weui-form-preview__label">{{$t(item.label)}}</label>
         <span class="weui-form-preview__value">{{$t(item.value)}}</span>
       </div>
     </div>
-    <div class="weui-form-preview__ft">
+    <div class="weui-form-preview__ft" v-show="footerButtons">
       <a class="weui-form-preview__btn" :class="{'weui-form-preview__btn_default': button.style==='default', 'weui-form-preview__btn_primary': button.style === 'primary'}" href="javascript:" v-for="button in footerButtons" @click="onButtonClick(button.onButtonClick, button.link)">{{$t(button.text)}}</a>
     </div>
   </div>
