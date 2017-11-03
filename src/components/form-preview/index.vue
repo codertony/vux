@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="weui-form-preview__ft" v-show="footerButtons">
-      <a class="weui-form-preview__btn" :class="{'weui-form-preview__btn_default': button.style==='default', 'weui-form-preview__btn_primary': button.style === 'primary'}" href="javascript:" v-for="button in footerButtons" @click="onButtonClick(button.onButtonClick, button.link)">{{$t(button.text)}}</a>
+      <a class="weui-form-preview__btn" :class="{'weui-form-preview__btn_default': button.style==='default', 'weui-form-preview__btn_primary': button.style === 'primary'}" href="javascript:" v-for="button in footerButtons" @click.self.stop="onButtonClick(button.onButtonClick, button.link)">{{$t(button.text)}}</a>
     </div>
   </div>
 </template>

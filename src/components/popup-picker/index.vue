@@ -201,7 +201,7 @@ export default {
         }
       }
       const _val = getObject(val)
-      this.$emit('on-shadow-change', _val, value2name(_val, this.data).split(' '))
+      this.$emit('on-shadow-change', _val, value2name(_val, this.data).split(' '), this.tempValue)
     }
   },
   watch: {
